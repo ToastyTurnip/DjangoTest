@@ -1,0 +1,5 @@
+to add a new app
+    1. python manage.py startapp nameapp
+    2. modify views.py which determines what "page" we return using functions ddefined here - one such function is index
+    3. modify urls.py - which is where we sort of make a regualr expression to catch url strings of a request
+    
