@@ -1,7 +1,9 @@
 {%if all_blogs %}
     <ul>
         {% for blog in all_blogs %}
-        <li><a href="/blogs/{{ blog.id}}/">{{blog.title}}</a></li>
+        <!-- VERBOSE VERSION -->
+        <!-- <li><a href="/blogs/{{blog.id}}/">{{blog.title}}</a></li> --> 
+         <li><a href="{% url 'blogs:detail' blog.id %}"">{{blog.title}}</a></li>
         {% endfor %}
     </ul>
 {% else %}
