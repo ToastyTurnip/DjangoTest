@@ -10,4 +10,4 @@ class UserSerializer(serializers.ModelSerializer):
 class BlogPostSerializer(serializers.ModelSerializer):
     class Meta(object):
         model = BlogPost
-        fields = ["title", "content", "author"]
+        fields = ["title", "content", "author", "created_at"]

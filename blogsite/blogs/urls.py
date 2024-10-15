@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import path, include
 
 from . import views
 
@@ -8,8 +8,10 @@ urlpatterns = [
     path("", views.index, name = "index"),
     path("<int:blogpost_id>/", views.detail, name = "detail"),
     path("write/", views.create_blogpost, name = "create_blogpost"),
-    # path("accounts/register/", views.register, name = register),
-    path("login", views.login),
-    path("signup", views.signup),
-    path("test_token", views.test_token),
+    path("signup_js/", views.signup_js),
+    path("signup/", views.signup_view, name = "signup_view"),
+    # path("test_token/", views.test_token),
+    path("accounts/", include("django.contrib.auth.urls")),
+    path("login_js/", views.login_js, name = "login_js"),
+    path("blogs_list/", views.blogs_list),
 ]
