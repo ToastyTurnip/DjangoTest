@@ -1,3 +1,5 @@
 1. Create a virual environment (Optional)
-  ```bash python -m venv venv```
-2. 
+  \n```python -m venv venv```
+2. Activate the virtual environment
+   ```./venv/Scripts/activate```
+3.  
